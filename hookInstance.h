@@ -56,7 +56,7 @@
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL) = NULL; \
-    __auto_type replacement = ^(id self) { \
+    __auto_type replacement = ^returnType(id self) { \
         returnType (^orig)(void) = ^returnType(void) { \
             return originalImpl(self, _cmd); \
         }; \
@@ -71,7 +71,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0)) { \
         returnType (^orig)(t0) = ^returnType(t0 a0) { \
             return originalImpl(self, _cmd, a0); \
         }; \
@@ -86,7 +86,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1)) { \
         returnType (^orig)(t0, t1) = ^returnType(t0 a0, t1 a1) { \
             return originalImpl(self, _cmd, a0, a1); \
         }; \
@@ -101,7 +101,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2)) { \
         returnType (^orig)(t0, t1, t2) = ^returnType(t0 a0, t1 a1, t2 a2) { \
             return originalImpl(self, _cmd, a0, a1, a2); \
         }; \
@@ -116,7 +116,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2, t3) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2, t3)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2, t3)) { \
         returnType (^orig)(t0, t1, t2, t3) = ^returnType(t0 a0, t1 a1, t2 a2, t3 a3) { \
             return originalImpl(self, _cmd, a0, a1, a2, a3); \
         }; \
@@ -131,7 +131,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2, t3, t4) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2, t3, t4)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2, t3, t4)) { \
         returnType (^orig)(t0, t1, t2, t3, t4) = ^returnType(t0 a0, t1 a1, t2 a2, t3 a3, t4 a4) { \
             return originalImpl(self, _cmd, a0, a1, a2, a3, a4); \
         }; \
@@ -146,7 +146,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2, t3, t4, t5) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5)) { \
         returnType (^orig)(t0, t1, t2, t3, t4, t5) = ^returnType(t0 a0, t1 a1, t2 a2, t3 a3, t4 a4, t5 a5) { \
             return originalImpl(self, _cmd, a0, a1, a2, a3, a4, a5); \
         }; \
@@ -161,7 +161,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2, t3, t4, t5, t6) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6)) { \
         returnType (^orig)(t0, t1, t2, t3, t4, t5, t6) = ^returnType(t0 a0, t1 a1, t2 a2, t3 a3, t4 a4, t5 a5, t6 a6) { \
             return originalImpl(self, _cmd, a0, a1, a2, a3, a4, a5, a6); \
         }; \
@@ -176,7 +176,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2, t3, t4, t5, t6, t7) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6, t7)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6, t7)) { \
         returnType (^orig)(t0, t1, t2, t3, t4, t5, t6, t7) = ^returnType(t0 a0, t1 a1, t2 a2, t3 a3, t4 a4, t5 a5, t6 a6, t7 a7) { \
             return originalImpl(self, _cmd, a0, a1, a2, a3, a4, a5, a6, a7); \
         }; \
@@ -191,7 +191,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2, t3, t4, t5, t6, t7, t8) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6, t7, t8)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6, t7, t8)) { \
         returnType (^orig)(t0, t1, t2, t3, t4, t5, t6, t7, t8) = ^returnType(t0 a0, t1 a1, t2 a2, t3 a3, t4 a4, t5 a5, t6 a6, t7 a7, t8 a8) { \
             return originalImpl(self, _cmd, a0, a1, a2, a3, a4, a5, a6, a7, a8); \
         }; \
@@ -206,7 +206,7 @@ do { \
 do { \
     __block SEL _cmd = NSSelectorFromString(@#selectorName); \
     __block returnType (*originalImpl)(id, SEL, t0, t1, t2, t3, t4, t5, t6, t7, t8, t9) = NULL; \
-    __auto_type replacement = ^(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9)) { \
+    __auto_type replacement = ^returnType(id self, DECL_ARGS(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9)) { \
         returnType (^orig)(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9) = ^returnType(t0 a0, t1 a1, t2 a2, t3 a3, t4 a4, t5 a5, t6 a6, t7 a7, t8 a8, t9 a9) { \
             return originalImpl(self, _cmd, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9); \
         }; \
